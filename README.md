@@ -34,5 +34,5 @@ npm run build
 
 |STG|BRANCH|TRIGGER|URL|
 |-----|---|---|---|
-|DEV|Branch of PR|Manual Firebase CMD|[parc02-hello-vue.web.app](https://parc02-hello-vue.web.app/)|
+|DEV|Branch of PR|Manual Firebase CMD|[parc02-hello-vue1.web.app](https://parc02-hello-vue1.web.app/)|
 |PRD|MAIN|Auto Github Action| [parc02-hello-vue.github.io](https://parc02-hello-vue.github.io/)|
