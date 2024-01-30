@@ -27,6 +27,22 @@ npm run dev
 ```sh
 npm run build
 ```
+# Deploy Manual command
+```
+=== Deploying to 'html5-3'...
+
+i  deploying hosting
+i  hosting[parc02-hello-vue1]: beginning deploy...
+i  hosting[parc02-hello-vue1]: found 5 files in docs
+✔  hosting[parc02-hello-vue1]: file upload complete
+i  hosting[parc02-hello-vue1]: finalizing version...
+✔  hosting[parc02-hello-vue1]: version finalized
+i  hosting[parc02-hello-vue1]: releasing new version...
+✔  hosting[parc02-hello-vue1]: release complete
+
+✔  Deploy complete!
+```
+
 # 배포방법
 
 ### STG dev( [par-02.web.app](https://par-02.web.app/))
