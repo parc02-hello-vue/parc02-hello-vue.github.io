@@ -1,0 +1,11 @@
+{
+  "hosting": {
+      "site": "parc02-hello-vue1",
+    "public": "docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
