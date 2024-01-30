@@ -1,4 +1,5 @@
 # parc02-hello-vue.github.io
+![healthy-potatto](https://github.com/parc02-hello-vue/parc02-hello-vue.github.io/assets/148880521/3b6b84ef-89a2-4e60-b451-c17e1e434d94)
 
 This template should help get you started developing with Vue 3 in Vite.
 
