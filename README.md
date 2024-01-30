@@ -41,6 +41,9 @@ i  hosting[parc02-hello-vue1]: releasing new version...
 ✔  hosting[parc02-hello-vue1]: release complete
 
 ✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/html5-3/overview
+Hosting URL: https://parc02-hello-vue1.web.app
 ```
 
 # 배포방법
