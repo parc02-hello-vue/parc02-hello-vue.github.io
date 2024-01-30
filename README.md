@@ -27,3 +27,12 @@ npm run dev
 ```sh
 npm run build
 ```
+# 배포방법
+
+### STG dev( [par-02.web.app](https://par-02.web.app/))
+### STG prd([parc02-hello-vue.github.io](https://parc02-hello-vue.github.io/))
+
+|STG|BRANCH|TRIGGER|URL|
+|-----|---|---|---|
+|DEV|Branch of PR|Manual Firebase CMD|[par-02.web.app](https://par-02.web.app/)|
+|PRD|MAIN|Auto Github Action| [parc02-hello-vue.github.io](https://parc02-hello-vue.github.io/)|
