@@ -1,16 +1,16 @@
 <script setup>
 import {ref} from 'vue'
-import category from "@/assets/category.json"
+import book from "@/assets/book.json"
 
-const categories = ref(category);
+const books = ref(book);
 </script>
 
 <template>
     <div>
 	<ul>
-	    <li v-for="category in categories" :key="category.code">
-		<span>{{ category.name }}</span>
-		<span>{{ category.code }}</span>
+	<h1>Title-Author-Year</h1>
+	    <li v-for="(book) in books">
+{{ book.title}}-{{ book.author }}-{{ book.year }}
 	    </li>
 	</ul>
     </div>
