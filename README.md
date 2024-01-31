@@ -49,7 +49,7 @@ Hosting URL: https://parc02-hello-vue1.web.app
 
 # 배포방법
 
-### STG dev( [par-02.web.app](https://par-02.web.app/))
+### STG dev( [parc02-hello-vue.web.app](https://parc02-hello-vue.web.app/))
 ### STG prd([parc02-hello-vue.github.io](https://parc02-hello-vue.github.io/))
 
 |STG|BRANCH|TRIGGER|URL|
