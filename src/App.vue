@@ -8,10 +8,12 @@ const books = ref(book);
 <template>
     <div>
 	<ul>
-	<h1>Title-Author-Year</h1>
-	    <li v-for="(book) in books">
-{{ book.title}}-{{ book.author }}-{{ book.year }}
-	    </li>
+	<h1>Title-Author-Language-Pages-Year</h1>
+	    <template v-for="(book) in books">
+	    <li v-if="book.year>1500">
+{{ book.title}}-{{ book.author }}-{{ book.language}}-{{book.pages}}-{{book.year}}
+</li>
+</template>
 	</ul>
     </div>
 </template>
