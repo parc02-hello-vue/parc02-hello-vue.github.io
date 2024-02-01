@@ -1,11 +1,11 @@
 <script setup>
-function say(message) {
-    alert(message)
-}
+import {ref} from 'vue'
+
+const message = ref ('')
 </script>
 <template>
-<button @click = "say('hello')">Say Hello </button>
-<button @click = "say('bye')">Say Bye </button>
-
+<span> Multi-line message is:</span>
+<p style = "white-space: pre-line">{{message}}</p>
+<textarea v-model="message" placeholder="add multiple lines🦖"></textarea>`
 </template>
 
