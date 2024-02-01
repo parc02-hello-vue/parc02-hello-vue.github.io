@@ -5,11 +5,14 @@ const count = ref(0)
 	    console.log(document.getElementById('count').textContent)
 	    })
 onMounted(() =>{
-	console.log(`the componet is mounted`)
+	console.log(document.getElementById('count').textContent,`the componet is mounted`)
+	})
+onBeforeUpdate(() => {
+	console.log(document.getElementById('count').textContent+`🦖🦖🦖🦖🦖`)
 	})
 </script>
 
 <template>
-<button id='count' @click="count=count+10">🦖{{count}}🦖</button>
+<button id='count' @click="count=(count++)+'ha'">🦖{{count}}🦖</button>
 </template>
 
