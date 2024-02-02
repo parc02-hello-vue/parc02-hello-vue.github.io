@@ -1,41 +1,23 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
-const show = ref(true)
-const list = ref([1,2,3])
-    
-function renderList() {
-show.value =! show.value
-    console.log(show.value)
+const todoId = ref(1)
+const todoData = ref(null)
+
+async function fetchData() {
+todoData.value = null
+const res = await fetch(
+	`https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+	)
+	todoData.value= await res.json()
 }
-
-function addList() {
-list.value.push(list.value.length+1)   
-}
-
-//pop -> remove the last element of an array
-function removeList() {
-list.value.pop()
-}
-
-function reverseList()
-{
-   return list.value.reverse()
-}
-
+fetchData()
 </script>
 
 <template>
-<button @click="renderList()">List 렌더링 ON/OFF</button>
-<button @click="addList">List 추가</button>
-<button @click="removeList()">List 제거</button>
-<button @click="reverseList()">List 뒤집기</button>
-
-
-<ul v-if = "show">
-<li v-for ="item of list">{{item}}</li>
-</ul>
-<p v-else-if="list.length">List is not empty, but hidden</p>
-<p v-else>List is empty</p>
+<p>Todo id: {{todoId}}</p>
+<button @click="todoId++&fetchData() " :disabled="!todoData">Fetch next todo</button>
+<p v-if="!todoData">Loading...</p>
+<pre v-else>{{todoData}}</pre>
 </template>
 
