@@ -1,11 +1,39 @@
 <script setup>
-import Child from './components/Child.vue'
-import { ref} from 'vue'
+import { ref } from 'vue'
 
-const pocketMoney = ref('부모 컴포넌트로부터 <📩>를 받았어요!')
+const show = ref(true)
+const list = ref([1,2,3])
+    
+function renderList() {
+show.value =! show.value
+    console.log(show.value)
+}
+
+function addList() {
+list.value.push(list.value.length+1)   
+}
+
+//pop -> remove the last element of an array
+function removeList() {
+list.value.pop()
+}
+function reverseList()
+{
+   return list.value.reverse()
+}
+
+
 </script>
 
 <template>
-<Child :pocketMoney="pocketMoney"/>
+<button @click="renderList()">List 렌더링 ON/OFF</button>
+<button @click="addList">List 추가</button>
+<button @click="removeList()">List 제거</button>
+<button @click="reverseList()">List 뒤집기</button>
+<ul v-if = "show">
+<li v-for ="item of list">{{item}}</li>
+</ul>
+<p v-else-if="list.length">List is not empty, but hidden</p>
+<p v-else>List is empty</p>
 </template>
 
