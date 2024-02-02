@@ -17,11 +17,11 @@ list.value.push(list.value.length+1)
 function removeList() {
 list.value.pop()
 }
+
 function reverseList()
 {
    return list.value.reverse()
 }
-
 
 </script>
 
@@ -30,6 +30,8 @@ function reverseList()
 <button @click="addList">List 추가</button>
 <button @click="removeList()">List 제거</button>
 <button @click="reverseList()">List 뒤집기</button>
+
+
 <ul v-if = "show">
 <li v-for ="item of list">{{item}}</li>
 </ul>
