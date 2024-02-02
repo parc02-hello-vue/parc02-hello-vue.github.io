@@ -12,11 +12,12 @@ const res = await fetch(
 	todoData.value= await res.json()
 }
 fetchData()
+    watch(todoId, fetchData)
 </script>
 
 <template>
 <p>Todo id: {{todoId}}</p>
-<button @click="todoId++&fetchData() " :disabled="!todoData">Fetch next todo</button>
+<button @click="todoId++ " :disabled="!todoData">Fetch next todo</button>
 <p v-if="!todoData">Loading...</p>
 <pre v-else>{{todoData}}</pre>
 </template>
